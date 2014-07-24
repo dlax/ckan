@@ -1,0 +1,5 @@
+ckan (2.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Denis Laxalde <denis.laxalde@logilab.fr>  Thu, 24 Jul 2014 14:41:14 +0200
