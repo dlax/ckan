@@ -805,6 +805,10 @@ def dict_list_reduce(list_, key, unique=True):
     values for the key with unique values if requested. '''
     new_list = []
     for item in list_:
+        if not isinstance(item, dict):
+            log.warning('dict_list_reduce got a non-dict list item %s, '
+                        'skipping' % item)
+            continue
         value = item.get(key)
         if not value or (unique and value in new_list):
             continue
