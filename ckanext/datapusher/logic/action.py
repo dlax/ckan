@@ -60,8 +60,8 @@ def datapusher_submit(context, data_dict):
 
     datapusher_url = config.get('ckan.datapusher.url')
 
-    site_url = h.url_for('/', qualified=True)
-    callback_url = h.url_for('/api/3/action/datapusher_hook', qualified=True)
+    site_url = config.get('ckan.datapusher.site_url')
+    callback_url = urlparse.urljoin(site_url, 'api/3/action/datapusher_hook')
 
     user = p.toolkit.get_action('user_show')(context, {'id': context['user']})
 
